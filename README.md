@@ -1,35 +1,38 @@
-API Test
-Descrição
-Esta API foi desenvolvida como um teste e tem como objetivo simular um sistema de empresas e funcionários.
+# apitest
 
-Rotas
-GET /company: lista todas as empresas criadas.
-GET /employee: lista todos os funcionários de todas as empresas.
-GET /profile: passando o ID de uma empresa no header da requisição, é possível obter os funcionários dessa empresa.
-Como executar
-Para executar esta API em um ambiente local, siga os passos abaixo:
+This is a simple API test project. It consists of a Node.js application that provides a few routes to access and manipulate data.
 
-Clone este repositório em sua máquina:
-bash
-Copy code
-git clone https://github.com/yourusername/apitest.git
-Certifique-se de ter o Docker instalado em sua máquina.
+## Prerequisites
 
-Navegue até o diretório raiz do projeto e execute o seguinte comando para criar uma imagem Docker da aplicação:
+Make sure you have Docker installed on your machine.
 
-Copy code
+## Usage
+
+To use this application, follow the steps below:
+
+1. Clone the repository:
+
+git clone https://github.com/your-username/apitest.git
+
+
+2. Go to the project directory:
+cd apitest
+
+
+3. Build the Docker image:
 docker build -t apitest .
-Após a conclusão da criação da imagem, execute o seguinte comando para iniciar o container da aplicação:
-arduino
-Copy code
-docker run -p 3333:3333 apitest
-Acesse a API em seu navegador ou em alguma ferramenta de teste de API, através das seguintes rotas:
-GET http://localhost:3333/company
-GET http://localhost:3333/employee
-GET http://localhost:3333/profile
-Tecnologias utilizadas
-Node.js
-Express.js
-Docker
-Autor
-Igor S. Menezes
+
+
+4. Run the container:
+docker run -p 3333:3333 -d apitest
+
+
+Now you can access the API by navigating to `http://localhost:3333` in your web browser or by using a tool like cURL or Postman.
+
+## Routes
+
+- `/company`: Lists all companies created.
+- `/employee`: Lists all employees of all companies.
+- `/profile`: Requires the company ID in the request header and lists all employees of that company.
+
+That's it! Enjoy the API.
